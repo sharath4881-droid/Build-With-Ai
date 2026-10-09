@@ -1,0 +1,259 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-surface: #10131b;
+    --color-surface-dim: #10131b;
+    --color-surface-bright: #363941;
+    --color-surface-container-lowest: #0b0e15;
+    --color-surface-container-low: #181b23;
+    --color-surface-container: #1c2027;
+    --color-surface-container-high: #272a32;
+    --color-surface-container-highest: #32353d;
+    --color-surface-variant: #32353d;
+    --color-on-surface: #e0e2ed;
+    --color-on-surface-variant: #bbcabf;
+    --color-inverse-surface: #e0e2ed;
+    --color-inverse-on-surface: #2d3038;
+    --color-outline: #86948a;
+    --color-outline-variant: #3c4a42;
+    --color-primary: #4edea3;
+    --color-on-primary: #003824;
+    --color-primary-container: #10b981;
+    --color-on-primary-container: #00422b;
+    --color-primary-fixed: #6ffbbe;
+    --color-secondary: #ffb77d;
+    --color-on-secondary: #4d2600;
+    --color-secondary-container: #d97707;
+    --color-tertiary: #4cd7f6;
+    --color-on-tertiary: #003640;
+    --color-tertiary-container: #00b2d0;
+    --color-error: #ffb4ab;
+    --color-on-error: #690005;
+    --color-error-container: #93000a;
+  }
+
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #10131b;
+    color: #e0e2ed;
+    font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overscroll-behavior: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Safe area insets */
+  .pt-safe {
+    padding-top: max(env(safe-area-inset-top, 0px), 0px);
+  }
+  .pb-safe {
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), 0px);
+  }
+}
+
+/* Custom Design System Tokens */
+.bg-surface { background-color: #10131b; }
+.bg-surface-dim { background-color: #10131b; }
+.bg-surface-bright { background-color: #363941; }
+.bg-surface-container-lowest { background-color: #0b0e15; }
+.bg-surface-container-low { background-color: #181b23; }
+.bg-surface-container { background-color: #1c2027; }
+.bg-surface-container-high { background-color: #272a32; }
+.bg-surface-container-highest { background-color: #32353d; }
+.bg-surface-variant { background-color: #32353d; }
+.bg-primary { background-color: #4edea3; }
+.bg-primary-container { background-color: #10b981; }
+.bg-secondary { background-color: #ffb77d; }
+.bg-secondary-container { background-color: #d97707; }
+.bg-tertiary { background-color: #4cd7f6; }
+.bg-tertiary-container { background-color: #00b2d0; }
+.bg-error { background-color: #ffb4ab; }
+.bg-error-container { background-color: #93000a; }
+
+.text-surface { color: #10131b; }
+.text-on-surface { color: #e0e2ed; }
+.text-on-surface-variant { color: #bbcabf; }
+.text-outline { color: #86948a; }
+.text-outline-variant { color: #3c4a42; }
+.text-primary { color: #4edea3; }
+.text-primary-container { color: #10b981; }
+.text-secondary { color: #ffb77d; }
+.text-tertiary { color: #4cd7f6; }
+.text-error { color: #ffb4ab; }
+
+.border-outline { border-color: #86948a; }
+.border-outline-variant { border-color: #3c4a42; }
+.border-surface-container-highest { border-color: #32353d; }
+
+/* Spacing tokens */
+.gap-space-xs { gap: 0.25rem; }
+.gap-space-sm { gap: 0.5rem; }
+.gap-space-md { gap: 1rem; }
+.gap-space-lg { gap: 1.5rem; }
+.gap-space-xl { gap: 2.5rem; }
+
+.p-space-xs { padding: 0.25rem; }
+.p-space-sm { padding: 0.5rem; }
+.p-space-md { padding: 1rem; }
+.p-space-lg { padding: 1.5rem; }
+.p-space-xl { padding: 2.5rem; }
+
+.px-space-xs { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-space-sm { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-space-md { padding-left: 1rem; padding-right: 1rem; }
+
+.py-space-xs { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-space-sm { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-space-md { padding-top: 1rem; padding-bottom: 1rem; }
+
+.px-margin { padding-left: 1rem; padding-right: 1rem; }
+.pb-space-xl { padding-bottom: 2.5rem; }
+.pt-space-xs { padding-top: 0.25rem; }
+
+/* Typography */
+.font-headline-xl {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.font-headline-lg {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.font-headline-md {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.text-headline-md {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.font-title-sm {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+}
+
+.text-title-sm {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.font-body-lg {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.font-body-md {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.text-body-md {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.font-body-sm {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.text-body-sm {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.font-label-telemetry {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+.text-label-telemetry {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.06em;
+}
+
+.font-label-meter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+.font-label-stamped {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.text-label-stamped {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.12em;
+}
+
+/* Material symbol baseline alignment */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tactile shadows & debossed metal textures */
+.shadow-recessed {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.shadow-machined {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.shadow-bevel-subtle {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Striped hazard background */
+.hazard-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    #93000a,
+    #93000a 6px,
+    #ffb4ab 6px,
+    #ffb4ab 12px
+  );
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+}

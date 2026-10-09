@@ -1,0 +1,6 @@
+{
+  "name": "PulseForce Executive Incident Console",
+  "description": "Tactile executive incident dispatch and SLA pressure console with real-time SFDC sync, autonomous copilot drafting, and emergency escalation controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
